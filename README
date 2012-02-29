@@ -14,7 +14,7 @@ The default SOR relaxation factor = 1. See Relaxationfactor.png for run times of
 
 MAX_ERROR for each = 0.0001, Max iterations for each = 1000.
 
-Gauss Seidel method worked up until nx = 22, Jacobi worked up until nx = 
+Gauss Seidel method worked up until nx = 22, Jacobi worked up until nx = 9. SOR started taking too long at nx = 15.
 
 The results of run time vs nx are located in RunTime.png.
 
