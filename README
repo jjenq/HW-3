@@ -1,0 +1,31 @@
+The three iterative solvers are used with Backward Euler 3D. The main function is located in BECS_3D.c.
+
+To compile: gcc BECS_3D.c -o BECS_3D nrutil.c Jacobi.c GaussSeidel.c SOR.c MatrixMultiplication.c -lm
+
+MatrixMultiplication.c contains functions to multiply a matrix with a matrix and with a vector. 
+
+After compiling, run the program by inputting the type of solver you want to use as a command line argument:
+./BECS_3D Jacobi
+./BECS_3D GaussSeidel
+./BECS_3D SOR
+
+Currently the program loops from nx = 1 to nx = 25 with the only output being the number of seconds it takes to run with certain nx size. 
+The default SOR relaxation factor = 1. See Relaxationfactor.png for run times of different values for w.
+
+MAX_ERROR for each = 0.0001, Max iterations for each = 1000.
+
+Gauss Seidel method worked up until nx = 22, Jacobi worked up until nx = 
+
+The results of run time vs nx are located in RunTime.png.
+
+
+The derivations for problems 4, 5, and 6 are in GrowthRateDerivations.pdf.  The stability conditions are as follows:
+FTCS 1D: Cx <= 1/2
+FTCS 2D: Cx + Cy <= 1/2
+FTCS 3D: Cx + Cy + Cz <= 1/2
+BECS 1D: Unconditionally stable
+BECS 2D: Unconditionally stable
+BECS 3D: Unconditionally stable
+CN 1D: Unconditionally stable
+CN 2D: Unconditionally stable
+CN 3D: Unconditionally stable
